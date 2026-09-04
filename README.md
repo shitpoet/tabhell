@@ -43,7 +43,8 @@ The CLI is a thin client over the host's own HTTP and WebSocket interfaces on
 the same port, so anything can drive it. Every command is a GET whose query
 string carries the parameters, and the reply is `{ok, result}` as JSON:
 
-    curl '127.0.0.1:29800/execute?host=example.com&code=document.title'
+    $ curl '127.0.0.1:29800/execute?host=example.com&code=document.title'
+    {"ok":true,"result":"Example Domain"}
 
 Over WebSocket, send `{"id": "1", "action": "getTabs", "params": {}}` and the
 reply comes back as `{"id": "1", "ok": true, "result": [...]}`.
