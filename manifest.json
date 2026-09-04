@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "tabhell",
+  "version": "0.1.0",
+  "description": "Control tabs, bookmarks and page scripts from outside the browser.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxdQv3lRpLoZHG+7Dxp08J1KGxOo/YDYqXpxRy7PjoUAFy6dL7oheOZiVuPYeWIjQ1ki9Az+2mTL2LF5XyZpyvOGPQBaWlBg5+1cXihb+GPU8POKunSRy4z4kxxGwhjnHQRUx7KIckkv7i2OyfN3xnj6C5snVkr4lQDy1zSta3bfzcaadhzV1DhxxSztLZeE+L9YNX1uDONdEJUN+8RBtWkdvNZ7HpqbG/Dzzz0shxfGTr9p36ikiYu3ytHvapz1rVhNoFdSx+2VwLTyerHWVtaV9MajSm0s9KulqMezBLw46lNLO6qmYmA7B0D1T0wzxcDtZN0aG+rOcfnSmP6ZivwIDAQAB",
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "permissions": ["tabs", "scripting", "bookmarks", "favicon", "nativeMessaging", "alarms"],
+  "host_permissions": ["<all_urls>"]
+}

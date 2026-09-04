@@ -1,0 +1,7 @@
+{
+  "name": "cc.shitpoet.tabhell",
+  "description": "tabhell native host",
+  "path": "/home/ors/brex/tabhell/tabhell.mjs",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://behpankpnjommhpgbhllbmnmanoilboc/"]
+}

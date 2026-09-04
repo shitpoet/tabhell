@@ -1,0 +1,5 @@
+key.pem
+.key.b64
+.extid
+node_modules
+CLAUDE.md
