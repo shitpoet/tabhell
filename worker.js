@@ -198,6 +198,30 @@ const handlers = {
     }))
   },
 
+  // A discarded tab keeps its strip entry but has no renderer, so its memory is
+  // gone until it is activated again. A frozen one still has the renderer, only
+  // with its timers stopped. autoDiscardable is false when the tab is exempt
+  // from automatic discarding.
+  getTabStatus: async (params) => {
+    const tab = await resolveTab(params)
+    return {
+      id: tab.id,
+      title: tab.title,
+      url: tab.url,
+      status: tab.status,
+      discarded: tab.discarded,
+      frozen: tab.frozen,
+      autoDiscardable: tab.autoDiscardable,
+      active: tab.active,
+      audible: tab.audible,
+      muted: tab.mutedInfo ? tab.mutedInfo.muted : undefined,
+      pinned: tab.pinned,
+      windowId: tab.windowId,
+      groupId: tab.groupId,
+      lastAccessed: tab.lastAccessed
+    }
+  },
+
   getBookmarks: async () => {
     return flattenBookmarks(await chrome.bookmarks.getTree(), [])
   },

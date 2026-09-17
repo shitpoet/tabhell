@@ -21,6 +21,7 @@ pick the cloned directory. `./tabhell ping` should answer `pong`.
 usage: tabhell <command> [positional ...] [--flag] [--flag=value]
 
   getTabs                                     list open tabs
+  getTabStatus <tabId|host>                   lifecycle state of a tab: discarded, frozen, load status, audio
   getBookmarks                                list bookmarks
   addTab <url> <foreground> <nearTabId>       open a url, optionally right after another tab
   openTab <tabId|host>                        focus a tab and raise its window, by host takes the leftmost

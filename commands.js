@@ -1,6 +1,10 @@
 // Parameter order doubles as positional-argument order for the CLI.
 export const commands = {
   getTabs: { params: {}, help: 'list open tabs' },
+  getTabStatus: {
+    params: { tabId: 'number', host: 'string' },
+    help: 'lifecycle state of a tab: discarded, frozen, load status, audio'
+  },
   getBookmarks: { params: {}, help: 'list bookmarks' },
   addTab: {
     params: { url: 'string', foreground: 'boolean', nearTabId: 'number' },
